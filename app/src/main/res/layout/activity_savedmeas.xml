@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFA726"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:text="Data"
+        android:gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TableLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/table_row1"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/datetime"
+                        android:fontFamily="serif"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="#FFA726"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:text="Datetime"/>
+
+                    <TextView
+                        android:id="@+id/cell_id"
+                        android:textColor="#FFA726"
+                        android:fontFamily="serif"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:text="Cell_id"/>
+                    <TextView
+                        android:textColor="#FFA726"
+                        android:id="@+id/signal_strength"
+                        android:fontFamily="serif"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:text="SS"/>
+                    <TextView
+                        android:textColor="#FFA726"
+                        android:id="@+id/signal_quality"
+                        android:fontFamily="serif"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:text="SQ"/>
+
+                </TableRow>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <View
+                    android:layout_height="40dip"
+                    android:layout_width="match_parent"
+                    android:background="#212121"/>
+    </ScrollView>
+            </TableLayout>
+            <ListView
+                android:id="@+id/records_view"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="1000dp"
+                android:textAlignment="center"
+                android:dividerHeight="10sp">
+            </ListView>
+
+
+        </LinearLayout>
+
+</LinearLayout>

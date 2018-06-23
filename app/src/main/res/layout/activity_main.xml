@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.klemen.indoorsignalmeasurement.MainActivity"
+    android:orientation="vertical"
+    android:background="#212121"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_TELEPHONY_SERVICE"
+        android:textSize="20dp"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="GPS"
+        android:id="@+id/textView"
+        android:textColor="#FFA726"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/coordinates"
+        android:textSize="20dp"
+        android:text="coordinate"
+        android:textColor="#FFA726" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Signal/cell id"
+        android:id="@+id/textView3"
+        android:textSize="14sp"
+        android:textColor="#FFA726" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="2g and 3g signal strength"
+        android:id="@+id/signal"
+        android:textSize="20dp"
+        android:layout_above="@+id/cell_lac_psc"
+        android:textColor="#FFA726" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="cell_lac_psc"
+        android:id="@+id/cell_lac_psc"
+        android:textSize="20dp"
+        android:layout_above="@+id/button"
+        android:textColor="#FFA726" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Signal strength:"
+        android:id="@+id/neighbourView"
+        android:textColor="#FFA726"/>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20sp" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="wrap_content"
+        android:layout_height="154dp"
+        android:id="@+id/graph"
+        />
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="20dp"
+        android:id="@+id/adj1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/adj2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="20dp"
+        android:id="@+id/adj3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="20dp"
+        android:id="@+id/adj4" />-->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <Button
+        android:text="Meas History"
+        android:layout_width="178dp"
+        android:id="@+id/savedmeasbutton"
+        android:onClick="tosavedmeas"
+        android:background="#FFA726"
+        android:textSize="10sp"
+        android:layout_height="50dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20sp" />
+
+    <Button
+        android:text="Pathloss calculator"
+        android:layout_width="178dp"
+        android:id="@+id/infobutton"
+        android:onClick="ButtonClick2"
+        android:paddingTop="0dp"
+        android:background="#FFA726"
+        android:textSize="10sp"
+        android:layout_height="50dp" />
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ISM</string>
+    <string name="title_activity_login">Sign in</string>
+
+
+    <string name="api_ip">http://35.195.64.234:5222/</string>
+
+
+    <!-- Strings related to login -->
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="login_text">Login Page</string>
+    <string name="username_text">User Name</string>
+    <string name="password_text">Password</string>
+    <string name="attempt_text">Attempt</string>
+    <string name="button_login_text">Login</string>
+    <string name="screen_page_text">Welcome  to the second page</string>
+
+
+
+</resources>
