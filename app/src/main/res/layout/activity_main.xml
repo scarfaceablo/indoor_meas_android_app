@@ -26,17 +26,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="GPS"
+        android:text="Location (GPS)"
+        android:textSize="20sp"
         android:id="@+id/textView"
         android:textColor="#FFA726"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/coordinates"
-        android:textSize="20dp"
+        android:textSize="16sp"
         android:text="coordinate"
         android:textColor="#FFA726" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,8 +49,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Signal/cell id"
         android:id="@+id/textView3"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:textColor="#FFA726" />
+
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,7 +61,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="2g and 3g signal strength"
         android:id="@+id/signal"
-        android:textSize="20dp"
+        android:textSize="16sp"
         android:layout_above="@+id/cell_lac_psc"
         android:textColor="#FFA726" />
 
@@ -63,18 +71,23 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="cell_lac_psc"
         android:id="@+id/cell_lac_psc"
-        android:textSize="20dp"
+        android:textSize="14sp"
         android:layout_above="@+id/button"
         android:textColor="#FFA726" />
 
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Signal strength:"
         android:id="@+id/neighbourView"
-        android:textColor="#FFA726"/>
+        android:textColor="#FFA726"
+        android:text="Signal strength"
+        android:textSize="20sp" />
 
 
     <Space
@@ -83,9 +96,8 @@
 
     <com.jjoe64.graphview.GraphView
         android:layout_width="wrap_content"
-        android:layout_height="154dp"
         android:id="@+id/graph"
-        />
+        android:layout_height="240sp" />
 
     <!--<TextView
         android:layout_width="wrap_content"
@@ -122,27 +134,40 @@
         android:layout_width="match_parent"
         android:layout_height="10dp" />
 
-    <Button
-        android:text="Meas History"
-        android:layout_width="178dp"
-        android:id="@+id/savedmeasbutton"
-        android:onClick="tosavedmeas"
-        android:background="#FFA726"
-        android:textSize="10sp"
-        android:layout_height="50dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Table view "
+            android:layout_width="178dp"
+            android:id="@+id/savedmeasbutton"
+            android:onClick="tosavedmeas"
+            android:background="#FFA726"
+            android:textSize="14sp"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+
+        <Space
+            android:layout_width="20sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Pathloss calculator"
+            android:layout_width="178dp"
+            android:id="@+id/infobutton"
+            android:onClick="ButtonClick2"
+            android:paddingTop="0dp"
+            android:background="#FFA726"
+            android:textSize="14sp"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="20sp" />
-
-    <Button
-        android:text="Pathloss calculator"
-        android:layout_width="178dp"
-        android:id="@+id/infobutton"
-        android:onClick="ButtonClick2"
-        android:paddingTop="0dp"
-        android:background="#FFA726"
-        android:textSize="10sp"
-        android:layout_height="50dp" />
 
 </LinearLayout>

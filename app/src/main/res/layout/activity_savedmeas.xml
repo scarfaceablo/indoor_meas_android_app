@@ -43,7 +43,7 @@
                         android:layout_weight="1"
                         android:textColor="#FFA726"
                         android:textSize="20sp"
-                        android:textAlignment="center"
+                        android:textAlignment="viewStart"
                         android:text="Datetime"/>
 
                     <TextView
@@ -54,7 +54,7 @@
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:textSize="20sp"
-                        android:textAlignment="center"
+                        android:textAlignment="viewStart"
                         android:text="Cell_id"/>
                     <TextView
                         android:textColor="#FFA726"
@@ -64,8 +64,8 @@
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:textSize="20sp"
-                        android:textAlignment="center"
-                        android:text="SS"/>
+                        android:textAlignment="viewStart"
+                        android:text="SS[dBm]"/>
                     <TextView
                         android:textColor="#FFA726"
                         android:id="@+id/signal_quality"
@@ -74,7 +74,7 @@
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         android:textSize="20sp"
-                        android:textAlignment="center"
+                        android:textAlignment="viewStart"
                         android:text="SQ"/>
 
                 </TableRow>

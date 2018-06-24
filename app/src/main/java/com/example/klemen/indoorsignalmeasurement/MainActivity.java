@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         graphView.addSeries(mSeries);
         graphView.getViewport().setXAxisBoundsManual(true);
         graphView.getViewport().setMinX(0);
-        graphView.getViewport().setMaxX(40);
+        graphView.getViewport().setMaxX(80);
 
         graphView.getViewport().setYAxisBoundsManual(true);
         graphView.getViewport().setMaxY(-40);
@@ -297,13 +297,13 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                             graph2LastXValue += 1d;
 
                             if(mastertype==1)
-                            {mSeries.appendData(new DataPoint(graph2LastXValue, Integer.parseInt(gsm_SS)), true, 40);}
+                            {mSeries.appendData(new DataPoint(graph2LastXValue, Integer.parseInt(gsm_SS)), true, 80);}
 
                             else if (mastertype == 2)
-                            {mSeries.appendData(new DataPoint(graph2LastXValue, Integer.parseInt(umts_SS)), true, 40);}
+                            {mSeries.appendData(new DataPoint(graph2LastXValue, Integer.parseInt(umts_SS)), true, 80);}
 
                             else if (mastertype==3)
-                            {mSeries.appendData(new DataPoint(graph2LastXValue, Integer.parseInt(lte_SS)), true, 40);}
+                            {mSeries.appendData(new DataPoint(graph2LastXValue, Integer.parseInt(lte_SS)), true, 80);}
 
 
                         } catch (Exception e) {
@@ -314,7 +314,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 });
             }
         };
-        timer.schedule(doAsynchronousTask, 0, 500); // ms
+        timer.schedule(doAsynchronousTask, 0, 1000); // ms
     }
 
 
@@ -649,7 +649,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 cell_lac_view.setText("Location Area Code: " + lac_umts + "\nCell ID: " + cid_short
                         +"\nRNC ID: " + rnc_id);
                 TextView textView3 = (TextView)findViewById(R.id.textView3);
-                textView3.setText("---UMTS info---");
+                textView3.setText("Radio parameters (UMTS)");
 
             }else if (mastertype == 3){
                 int tac_lte = cl.getLac();
@@ -662,7 +662,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
                 cell_lac_view.setText("Tracking Area Code: " + tac_lte + "\nCell ID: " + lte_long_cid + "\nBase station ID: " + mrbts_id);
                 TextView textView4 = (TextView)findViewById(R.id.textView3);
-                textView4.setText("---LTE info---");
+                textView4.setText("Radio parameters (LTE)");
             }else{
                 int lac = cl.getLac();
                 int cid = cl.getCid();
@@ -670,7 +670,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 gsm_cell_id_to_send=cid;
                 cell_lac_view.setText("Location Area Code: " + lac + "\nCell ID: " + cid);
                 TextView textView5 = (TextView)findViewById(R.id.textView3);
-                textView5.setText("---GSM info---");
+                textView5.setText("Radio parameters (GSM)");
             }
 
 

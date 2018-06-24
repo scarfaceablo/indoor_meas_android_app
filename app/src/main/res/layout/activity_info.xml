@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.klemen.indoorsignalmeasurement.info"
-    android:background="@android:color/holo_blue_bright">
+    android:background="#212121">
 
     <TextView
         android:text="frequency in MHz"
@@ -18,7 +18,8 @@
         android:id="@+id/frequency"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="#FFA726"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -27,7 +28,8 @@
         android:ems="10"
         android:id="@+id/editText2"
         android:layout_below="@+id/frequency"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFA726"/>
 
     <TextView
         android:text="Height of antenna on BS"
@@ -36,7 +38,8 @@
         android:id="@+id/height_ant_BS"
         android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="#FFA726"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -45,7 +48,8 @@
         android:ems="10"
         android:id="@+id/editText3"
         android:layout_below="@+id/height_ant_BS"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignStart="@+id/editText2"
+        android:textColor="#FFA726"/>
 
     <TextView
         android:text="Ant height correction factor"
@@ -54,7 +58,8 @@
         android:id="@+id/ant_corr_factor"
         android:layout_below="@+id/editText3"
         android:layout_centerHorizontal="true"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="#FFA726"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -63,7 +68,8 @@
         android:ems="10"
         android:id="@+id/editText4"
         android:layout_below="@+id/ant_corr_factor"
-        android:layout_alignStart="@+id/editText3" />
+        android:layout_alignStart="@+id/editText3"
+        android:textColor="#FFA726"/>
 
     <TextView
         android:text="Distance between BS and MS"
@@ -72,16 +78,19 @@
         android:id="@+id/dist_BS_MS"
         android:layout_below="@+id/editText4"
         android:layout_centerHorizontal="true"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="#FFA726"/>
 
     <Button
         android:text="Calculate pathloss"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Calculatepathloss"
         android:layout_marginTop="67dp"
         android:layout_alignTop="@+id/editText5"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="#FFA726"
+        android:textSize="10sp"
+        android:layout_width="120sp" />
 
     <TextView
         android:text="TextView"
@@ -91,7 +100,8 @@
         android:layout_toEndOf="@+id/frequency"
         android:layout_marginBottom="62dp"
         android:id="@+id/Result"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="#FFA726"/>
 
     <TextView
         android:text="Pathloss: "
@@ -99,6 +109,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView10"
         android:textSize="24sp"
+        android:textColor="#FFA726"
         android:layout_alignBaseline="@+id/Result"
         android:layout_alignBottom="@+id/Result"
         android:layout_alignStart="@+id/ant_corr_factor" />
@@ -108,6 +119,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
+        android:textColor="#FFA726"
         android:id="@+id/editText5"
         android:layout_below="@+id/dist_BS_MS"
         android:layout_alignStart="@+id/editText4" />

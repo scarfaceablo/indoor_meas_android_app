@@ -103,7 +103,7 @@ public class savedmeas extends AppCompatActivity {
 
 
 
-                                JsonObjectRequest LoginRequest = new JsonObjectRequest(Request.Method.GET, url_get_data,
+                                JsonObjectRequest GetDataRequest = new JsonObjectRequest(Request.Method.GET, url_get_data,
 
                                         new Response.Listener<JSONObject>() {
 
@@ -148,20 +148,9 @@ public class savedmeas extends AppCompatActivity {
                                                                 e.printStackTrace();
                                                             }
 
-
-
                                                             String outPut = datetime + "-" +cell_id;
 
-
-
-
                                                             //listContents.add(outPut);
-
-
-
-
-
-
 
                                                         } catch (JSONException e) {
                                                             // Oops
@@ -202,10 +191,10 @@ public class savedmeas extends AppCompatActivity {
 
                                 });
 
-                                GetDataQueue.add(LoginRequest);
+                                GetDataQueue.add(GetDataRequest);
 
                             } catch (Exception e) {
-                                // TODO Auto-generated catch block
+                                // TODO
 
                             }
                         }

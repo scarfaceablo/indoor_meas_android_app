@@ -57,7 +57,7 @@ public class RecordAdapter extends BaseAdapter {
         holder.ageView.setText(record.datetime);
         holder.nameView.setText(record.cell_id);
         holder.positionView.setText(record.SS);
-        holder.addressView.setText(record.SS);
+        holder.addressView.setText(record.SQ);
 
         return view;
     }
